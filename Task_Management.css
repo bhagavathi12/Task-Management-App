@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #dfdfef;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+form{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 15, 0.3);
+    width: 400px;
+}
+fieldset{
+    padding: 10px;
+}
+legend{
+    font-size: 30px;
+    font-style: italic;
+    text-align: center;
+}
+label{
+    font-size: 20px;
+    font-weight: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input[type="text"],
+textarea,
+input[type="date"]{
+    width: calc(100%-20px);
+    text-align: center;
+    margin-left: 10px;
+    height: 20px;
+    padding: 5px;
+}
+input[type='radio']{
+    margin-right: 5px;
+}
+
+button{
+    display: block; 
+    margin:20px auto; /*centers the block element horizontally */
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: #a6b2b3; 
+    font-size: 20px;
+    cursor: pointer;
+}
+.container{
+    margin: 20px;
+    padding: 10px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mytable{
+    display: none;
+    background-color: #DAE0E2;
+    border-collapse: collapse; /* to merge borders*/
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* overflow: hidden; */
+}
+#mytable thead th{
+    background-color: #64717e;
+    color: #DAE0E2;
+    padding: 10px 15px;
+    border-bottom: 3px solid #2C3335;
+    font-size: 20px;
+    text-align: center;
+}
+
+#mytable tbody tr{
+    text-align: center;
+    font-size: 20px;   
+}
+
+#mytable tbody tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+#mytable td{
+    padding: 5px 15px;
+    border-bottom: 1px solid #7B8788;
+}
+.task-title-cell{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.description-cell{
+    font-weight: 200;
+    font-style: italic;
+}
+

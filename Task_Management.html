@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="Task_Management.css">
+</head>
+<body>
+    <form id="task">
+        <fieldset>
+            <legend>Add Your Tasks here!!!</legend>
+            <label for="task-title">Task Title:</label>
+            <input type="text" name="task-title" id="task-title" placeholder="Enter yout task" required> <br>
+            <label for="description">Description:</label><br>
+            <textarea name="description" rows="4" cols="40" id="description" required></textarea>
+            <br>
+            <label for="due">Due -</label>
+            <input type="date" name="duedate" id="due" required>
+            <br>
+            <fieldset style="width: 100px" required>
+                <legend>Prioritize</legend>
+                <input type="radio" name="priority" id="priority-low" value="low">
+                <label for="priority-low">Low</label><br>
+                <input type="radio" name="priority" id="priority-medium" value="medium">
+                <label for="priority-medium">Medium</label><br>
+                <input type="radio" name="priority" id="priority-high" value="high">
+                <label for="priority-high">High</label><br>
+            </fieldset>
+            <button type="submit" id="btn">Submit</button>
+        </fieldset>
+    </form>
+    <div class="container">
+        <table id="mytable">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Due Date</th>
+                <th>Priority</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        
+    </div>
+    <script src="Task_Management.js"></script>
+</body>
+</html>
