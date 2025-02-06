@@ -101,7 +101,7 @@ const loadTableData = () => {
   const CompletedData = JSON.parse(localStorage.getItem("CompletedData"));
   console.log(CompletedData);
 
-  if (PendingData.length > 0) {
+  if (PendingData && PendingData.length > 0) {
 
     taskdiv.classList.remove("hide");
 
@@ -125,7 +125,7 @@ const loadTableData = () => {
     });
   }
 
-  if (CompletedData.length > 0) {
+  if (CompletedData && CompletedData.length > 0) {
     
     if (taskdiv.classList.contains("hide")) {
       taskdiv.classList.remove("hide");
