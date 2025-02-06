@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <form id="form">
+      <fieldset>
+        <legend>Add your Tasks</legend>
+        <label for="task-title">Task:</label>
+        <input
+          type="text"
+          placeholder="Enter your task"
+          name="task-title"
+          id="tasktitle"
+          required
+        /><br />
+        <label for="task-description">Description:</label><br />
+        <textarea
+          name="task-description"
+          id="description"
+          placeholder="Enter Task description"
+          cols="50"
+          rows="10"
+          required
+        ></textarea
+        ><br />
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="duedate" required /><br />
+        <fieldset class="priority">
+          <legend>Priority</legend>
+          <input
+            type="radio"
+            name="priority"
+            value="low"
+            id="priority-low"
+            required
+          />
+          <label for="priority-low">Low</label><br />
+          <input
+            type="radio"
+            name="priority"
+            value="medium"
+            id="priority-medium"
+            required
+          />
+          <label for="priority-medium">Medium</label><br />
+          <input
+            type="radio"
+            name="priority"
+            value="high"
+            id="priority-high"
+            required
+          />
+          <label for="priority-high" name="priority">High</label>
+        </fieldset>
+        <button type="submit" id="submit">Add Task</button>
+      </fieldset>
+    </form>
+    <div class="hide task-table" id="task-div">
+      <section class="tasks">
+        <section class="task-header">
+          <label for="Priority">Priority:</label>
+          <select name="Priority" id="priority-filter" value="applyfilter">
+            <option value="all">All</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <input type="text" placeholder="Search" id="search" />
+          <label for="date">Due-Date:</label>
+          <input type="date" name="date" id="duedate-filter" />
+          <label for="tasks">Tasks:</label>
+          <select name="Task" id="tasks-filter" value="applyfilter">
+            <option value="all">All</option>
+            <option value="pending">Pending Tasks</option>
+            <option value="completed">Completed Tasks</option>
+          </select>
+        </section>
+        <section class="table">
+          <table id="display">
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>Description</th>
+                <th>Due</th>
+                <th>Priority</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="hide" id="completedtaskdiv">
+            <h1 class="title">Completed Tasks</h1>
+            <table id="completed">
+              <thead>
+                <tr>
+                  <th>Task</th>
+                  <th>Description</th>
+                  <th>Due</th>
+                  <th>Priority</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </section>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
